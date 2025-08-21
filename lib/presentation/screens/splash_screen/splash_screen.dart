@@ -14,11 +14,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  late AppCubit _cubit;
   @override
   void didChangeDependencies() {
-    _cubit = AppCubit.get(context)
-      ..getMovies();
+    AppCubit.get(context)
+      .getMovies();
     super.didChangeDependencies();
   }
   @override
